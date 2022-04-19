@@ -4,6 +4,7 @@ const { Post, User, Vote, Comment } = require("../../models");
 const sequelize = require("../../config/connection");
 
 // get all users
+// ap/posts
 router.get("/", (req, res) => {
   Post.findAll({
     order: [["created_at", "DESC"]],
